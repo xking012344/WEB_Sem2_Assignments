@@ -1,0 +1,3 @@
+Make sure you have forked the assignment repo for this semester
+
+Then create a simple page with a button that prints Hello World using console.log
