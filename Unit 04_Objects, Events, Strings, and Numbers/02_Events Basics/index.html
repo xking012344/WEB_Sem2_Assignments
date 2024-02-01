@@ -9,13 +9,21 @@
 
     <body>
 
+        <script src="script.js"></script>
+
         <input type="text" 
         onkeydown="keyDownHandler()"
-        onmouseover="mouseOverHandler">
+        onmouseover="mouseOverHandler()"
+        onmouseout="mouseOutHandler()"
+        onclick="onClickHanlder()"
+        onload="onLoadHandler()"
+        onchange="onChangeHandler()">
 
         <p id="demo"></p>
 
-        <script src="script.js"></script>
+        <button onclick="onClickHanlder()">Click me.</button>
+
+        
     </body>
 
 </html> 

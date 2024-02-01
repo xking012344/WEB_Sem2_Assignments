@@ -3,7 +3,7 @@ function mouseOverHandler() {
 }
 
 function mouseOutHandler() {
-    document.getElementById("kitties").hidden = false;
+    document.getElementById("demo").innerHTML = "Bye";
 }
 
 function keyDownHandler() {
@@ -12,4 +12,16 @@ function keyDownHandler() {
 
 function keyUpHandler() {
     document.getElementById("kitties").hidden = true;
+}
+
+function onClickHandler() {
+    document.getElementById("demo").innerHTML = Date();
+}
+
+function onLoadHandler() {
+    document.getElementById("demo").innerHTML = "done";
+}
+
+function onChangeHandler() {
+    document.getElementById("demo").innerHTML = "change complete";
 }
