@@ -1,97 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
 
-        </style>
-    </head>
+    </style>
+</head>
 
-    <body>
-        <div id="block1">
-            <div id="controls1">
-                <label for="startAngle">Start Angle in Degrees: </label><br>
-                <input type="number" id="startAngle" name="startAngle">
-                <br>
+<body>
+    <div id="block1">
+        <div id="controls1">
+            <label for="startAngle">Start Angle in Degrees: </label><br>
+            <input type="number" id="startAngle" name="startAngle">
+            <br>
 
-                <label for="endAngle">End Angle in Degrees: </label><br>
-                <input type="number" id="endAngle" name="endAngle">
-                <br>
+            <label for="endAngle">End Angle in Degrees: </label><br>
+            <input type="number" id="endAngle" name="endAngle">
+            <br>
 
-                <label for="radius">Radius: </label><br>
-                <input type="number" id="radius" name="radius">
-                <br>
+            <label for="radius">Radius: </label><br>
+            <input type="number" id="radius" name="radius">
+            <br>
 
-                <label for="centerX">CenterX: </label><br>
-                <input type="number" id="centerX" name="centerX">
-                <br>
+            <label for="centerX">CenterX: </label><br>
+            <input type="number" id="centerX" name="centerX">
+            <br>
 
-                <label for="centerY">CenterY: </label><br>
-                <input type="number" id="centerY" name="centerY">
-                <br>
+            <label for="centerY">CenterY: </label><br>
+            <input type="number" id="centerY" name="centerY">
+            <br>
 
-                <label for="ccw">CCW </label><br>
-                <input type="checkbox" id="ccw" name="ccw">
-                <br>
+            <label for="ccw">CCW </label><br>
+            <input type="checkbox" id="ccw" name="ccw">
+            <br>
 
-                <br>
-                <button type="button" onclick="drawCircle()">Draw Circle</button>
-                <br>
-                <br>
-            </div>
-            <div id="canvas1">
-                <canvas id="myCanvas1" , width="200" height="200" style="border:1px solid #000000;">
-            </div>
+            <br>
+            <button type="button" onclick="drawCircle()">Draw Circle</button>
+            <br>
+            <br>
         </div>
-        <hr>
-        <div id="block2">
-            <div id="controls2">
-                <label for="startX">Starting X </label><br>
-                <input type="number" id="startX" name="startX">
-                <br>
-
-                <label for="startY">Starting Y</label><br>
-                <input type="number" id="startY" name="startY">
-                <br>
-
-                <label for="endX">Ending X </label><br>
-                <input type="number" id="endX" name="endX">
-                <br>
-
-                <label for="endY">Ending Y</label><br>
-                <input type="number" id="endY" name="endY">
-                <br>
-                <br>
-                <button type="button" onclick="drawLine()">Draw Line</button>
-                <br>
-                <br>
-            </div>
-            <div id="canvas1">
-                <canvas id="myCanvas2" , width="200" height="200" style="border:1px solid #000000;">
-            </div>
+        <div id="canvas1">
+            <canvas id="myCanvas1" , width="200" height="200" style="border:1px solid #000000;">
         </div>
-        <hr>
-        <div id="block3">
-            <div id="controls3">
-                
-            </div>
-            <div id="canvas3">
-                <canvas id="myCanvas3" , width="200" height="200" style="border:1px solid #000000;">
-            </div>
+    </div>
+    <hr>
+    <div id="block2">
+        <div id="controls2">
+            <label for="startX">Starting X </label><br>
+            <input type="number" id="startX" name="startX">
+            <br>
+
+            <label for="startY">Starting Y</label><br>
+            <input type="number" id="startY" name="startY">
+            <br>
+
+            <label for="endX">Ending X </label><br>
+            <input type="number" id="endX" name="endX">
+            <br>
+
+            <label for="endY">Ending Y</label><br>
+            <input type="number" id="endY" name="endY">
+            <br>
+            <br>
+            <button type="button" onclick="drawLine()">Draw Line</button>
+            <br>
+            <br>
         </div>
+        <div id="canvas1">
+            <canvas id="myCanvas2" , width="200" height="200" style="border:1px solid #000000;">
+        </div>
+    </div>
+    <hr>
+    <div id="block3">
+        <div id="controls3">
+            <label for="colorstop1">Color Stop 1:</label><br>
+            <input type="text" id="colorstop1" name="colorstop1">
+            <br>
+
+            <label for="colorstop2">Color Stop 2:</label><br>
+            <input type="text" id="colorstop2" name="colorstop2">
+            <br>
+
+            <label for="x0">x0: </label><br>
+            <input type="number" id="x0" name="x0">
+            <br>
+
+            <label for="y0">y0: </label><br>
+            <input type="number" id="y0" name="y0">
+            <br>
+
+            <label for="x1">x1: </label><br>
+            <input type="number" id="x1" name="x1">
+            <br>
+
+            <label for="y1">y1 </label><br>
+            <input type="number" id="y1" name="y1">
+            <br>
+            <br>
+            <button onclick="drawLinearGradient()">Draw Linear Gradient</button>
+            <br>
+            <br>
+        </div>
+        <div id="canvas3">
+            <canvas id="myCanvas3" , width="200" height="200" style="border:1px solid #000000;">
+        </div>
+    </div>
 
 
 
 
 
 
-        <script src="script.js"></script>
+    <script src="script.js"></script>
 
 
 
-    </body>
+</body>
 
 </html>

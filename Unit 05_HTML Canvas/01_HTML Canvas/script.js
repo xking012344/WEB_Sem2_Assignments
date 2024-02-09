@@ -45,3 +45,23 @@ function drawLine() {
     // Stroke it (Do the Drawing)
     ctx.stroke();
 }
+
+function drawLinearGradient() {
+    var colorstop1 = document.getElementById("colorstop1").value;
+    var colorstop2 = document.getElementById("colorstop2").value;
+    let x0 = +document.getElementById("x0").value;
+    let y0 = +document.getElementById("y0").value;
+    let x1 = +document.getElementById("x1").value;
+    let y1 = +document.getElementById("y1").value;
+
+
+    const canvas = document.getElementById("myCanvas3");
+    const ctx = canvas.getContext("2d");
+    // Create gradient
+    const gradient = ctx.createLinearGradient(x0, y0, x1, y1);
+    gradient.addColorStop(0, colorstop1);
+    gradient.addColorStop(1, colorstop2);
+    // Fill with gradient
+    ctx.fillStyle = gradient;
+    ctx.fillRect(x0, y0, x1, y1);
+}
