@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="GxK"></p>
+    <p id="music"></p>
+
+
+    <script>
+        const kaiju = ["Godzilla", "Kong", "Skar King", "Shimo"];
+
+        let text = "";
+        for(let x of kaiju){
+            text += x + "<br>";
+        }
+
+        document.getElementById("GxK").innerHTML = text;
+
+        function Song(title, style, artist) {
+            this.title = title;
+            this.style = style;
+            this.artist = artist;
+        }
+
+        const GvKK = new Song("Godzilla vs King Kong", "Rap", "Epic Rap Battles of History"); 
+        let txt = "";
+        for(let x in GvKK){
+            txt += GvKK[x] + "<br>";
+        }
+
+        document.getElementById("music").innerHTML = txt;
+    </script>
+
+</body>
+
+</html>
