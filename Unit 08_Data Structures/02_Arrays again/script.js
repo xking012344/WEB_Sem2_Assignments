@@ -28,3 +28,5 @@ let filteredNumbers = numbers.filter(filterOutEvens);
 
 
 document.getElementById("unsorted").innerHTML = filteredNumbers;
+filteredNumbers.sort(function(a, b){return a - b});
+document.getElementById("sorted").innerHTML = filteredNumbers;
