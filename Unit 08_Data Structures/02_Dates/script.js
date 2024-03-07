@@ -43,7 +43,7 @@ switch (month) {
         break;
 }
 
-document.getElementById("month").innerHTML = document.getElementById("month").innerHTML +  " " + year;
+document.getElementById("month").innerHTML = document.getElementById("month").innerHTML + " " + year;
 
 
 const calendarMap = new Map([
@@ -86,9 +86,21 @@ const calendarMap = new Map([
 
 const firstDayDate = new Date(year, month, 1);
 const firstDayNumber = firstDayDate.getDay() + 1;
-const firstDayDateNextMonth = new Date(year, month + 1, 1);
+const lastDayofMonth = new Date(year, month + 1, 1);
+lastDayofMonth.setDate(lastDayofMonth.getDate() - 1);
+const lastDayOfMonthNumber = lastDayofMonth.getDate();
+console.log(lastDayOfMonthNumber);
 
+for (let i = 1; i <= 35; i++) {
+    let check = i - firstDayDate + 1;
 
-for(let i = 1; i <= 35; i++){
-
+    if (i < firstDayNumber) {
+        let id = calendarMap.get(i);
+        document.getElementById(id).innerHTML = "";
+    }
+    else if (check >= 1) {
+        let id = calendarMap.get(i);
+        console.log(id)
+        document.getElementById(id).innerHTML = check;
+    }
 }
