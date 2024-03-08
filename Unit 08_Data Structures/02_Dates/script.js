@@ -1,6 +1,6 @@
 const currentDate = new Date();
-const month = currentDate.getMonth();
-const year = currentDate.getFullYear();
+let month = currentDate.getMonth();
+let year = currentDate.getFullYear();
 
 function generateCalendar(year, month) {
     switch (month) {
@@ -110,7 +110,15 @@ function generateCalendar(year, month) {
     }
 }
 
-
+function generatePrevMonth(){
+    month--;
+    if(month === -1){
+        month = 11;
+        year--;
+    }
+    generateCalendar(year, month);
+}
 
 generateCalendar(year, month);
 
+//YOUDO:  implement generateNextMonth Function
