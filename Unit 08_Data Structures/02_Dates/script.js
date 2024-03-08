@@ -110,9 +110,9 @@ function generateCalendar(year, month) {
     }
 }
 
-function generatePrevMonth(){
+function generatePrevMonth() {
     month--;
-    if(month === -1){
+    if (month === -1) {
         month = 11;
         year--;
     }
@@ -122,3 +122,14 @@ function generatePrevMonth(){
 generateCalendar(year, month);
 
 //YOUDO:  implement generateNextMonth Function
+
+function generateNextMonth() {
+    month++;
+    if (month === 12) {
+        month = 0;
+        year++;
+    }
+    generateCalendar(year, month);
+}
+
+generateCalendar(year, month);
